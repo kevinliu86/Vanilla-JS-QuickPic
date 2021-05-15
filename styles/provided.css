@@ -1,0 +1,192 @@
+/* base styles, feel free to edit */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  height: 100%;
+  font-family: -apple-system, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  min-height: 60px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  padding: 10px;
+  background-color: white;
+  min-height: 60px;
+  text-align: right;
+}
+
+.banner > *,
+footer > * {
+  margin: 10px 25px;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 5px;
+  display: inline;
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 70%;
+}
+/*header button*/
+.header-button {
+  font-size: 1.2em;
+}
+#follow-username {
+  font-size: 1.2em;
+}
+/*login style*/
+.login-register-page {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1%;
+}
+.loginInputBox {
+  width: 50%;
+  margin-top: 1%;
+}
+.loginInput {
+  font-size: 1.5em;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1%;
+}
+.loginButton {
+  background-color: #4287f5;
+  border: none;
+  color: white;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.create-buttons {
+  padding: 5px 15px;
+  background-color: #4287f5;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.loginTopic {
+  margin: 1%;
+  font-weight: normal;
+}
+.loginPtag {
+  margin: 0;
+}
+/**/
+.flexRow {
+  display: flex;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+.justifyContentFlexEnd {
+  justify-content: flex-end;
+}
+#feed-page {
+  align-items: center;
+}
+.error {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+.feedItem {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #333;
+}
+.feedImage {
+  width: 150px;
+}
+.author {
+  color: #0099ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Add your styles here */
+#buttons {
+  display: none;
+}
+
+.red {
+  color: red;
+}
+
+/* modal css */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  z-index: 1; /* Sit on top */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

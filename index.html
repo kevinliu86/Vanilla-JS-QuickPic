@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="login-page">
+    <meta name="author" content="Yanchao Liu z5144388">
+    <title>Quickpic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+    <!-- <script type="module" src="src/helpers.js"></script> -->
+    <script type="module" src="src/api.js"></script>
+</head>
+
+<body>
+    <!-- This is an example app structure, you can modify this as much as you choose -->
+    <header class="banner">
+        <h1>Quickpic</h1>
+        <!-- <ul class="nav">
+            <li class="nav-item">Item</li>
+            <li class="nav-item">Item</li>
+        </ul> -->
+        <div id="buttons">
+            <button id="stop-liveupdate" class="header-button">Start LiveUpdate</button>
+            <button id="new-post-button" class="header-button">Create New Post</button>
+            <input type="text" id="follow-username" placeholder="Username">
+            <button id="follow-button" class="header-button">Follow</button>
+            <!-- <button id="logout-button" class="header-button">Logout</button> -->
+        </div>
+
+
+    </header>
+    <main role="main">
+        <!-- app goes here -->
+        <!-- The Error Modal -->
+        <div id="error-modal" class="modal">
+            <!-- Modal content -->
+            <div id="error-modal-content" class="modal-content">
+                <span id="error-modal-x" class="close">&times;</span>
+                <p id="error-modal-text"></p>
+            </div>
+
+        </div>
+
+        <!-- login-page -->
+        <div id="login-page" class="login-register-page">
+            <h1 class="loginTopic">Login</h1>
+            <div class="loginInputBox">
+                <p class="loginPtag">Username:</p>
+                <input type="text" id="username-login" class="loginInput" placeholder="Username">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Password:</p>
+                <input type="password" id="password-login" class="loginInput" placeholder="Password">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Password confirm:</p>
+                <input type="password" id="password-confirm-login" class="loginInput" placeholder="Password confirm">
+            </div>
+
+            <div>
+                <button id="login-submit" class="loginButton">Login</button>
+                <button id="link-to-register" class="loginButton">Register</button>
+            </div>
+
+
+        </div>
+        <!-- register-page -->
+        <div id="register-page" class="hide login-register-page">
+            <h2 class="loginTopic">Registration</h2>
+            <div class="loginInputBox">
+                <p class="loginPtag">Username:</p>
+                <input type="text" id="username-register" class="loginInput" placeholder="Username">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Password:</p>
+                <input type="password" id="password-register" class="loginInput" placeholder="Password">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Password confirm:</p>
+                <input type="password" id="password-confirm-register" class="loginInput" placeholder="Password confirm">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Email:</p>
+                <input type="text" id="email-register" class="loginInput" placeholder="Email">
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">Name:</p>
+                <input type="text" id="name-register" class="loginInput" placeholder="Name">
+            </div>
+            <div>
+                <button id="link-to-login" class="loginButton">Login</button>
+                <button id="register-submit" class="loginButton">Submit</button>
+            </div>
+
+
+        </div>
+        <!-- feed-page -->
+        <div id="feed-page" class="hide login-register-page">
+            <h1>Welcome!!<span id="username" class="author"></span></h1>
+            <div id="posts" class="flexColumn"></div>
+        </div>
+        <!-- profile-page -->
+        <div id="profile-page" class="hide">
+            <h1>Profile Page</h1>
+            <button id="back-to-feed">Back to feed</button>
+            <button id="update-profile" class="hide">Updating the profile</button>
+            <div id="profile-items"></div>
+        </div>
+
+        <!-- create new post page -->
+        <div id="new-post-page" class="hide login-register-page">
+            <h1>Create a new post!!</h2>
+
+                <div class="loginInputBox">
+                    <p class="loginPtag">Description<span class="red">*</span>:</p>
+                    <input type="text" id="newpost-description" class="loginInput" placeholder="Description">
+                </div>
+                <div class="loginInputBox">
+                    <p class="loginPtag">Choose a png picture<span class="red">*</span></p>
+                    <input type="file" id="upload-img" accept="image/png" class="loginInput">
+                    <div class="flexRow">
+                        <button id="newpost-back-feed" class="create-buttons">Back to feed</button>
+                        <button id="new-post-submit" class="create-buttons">Submit</button>
+                    </div>
+
+                </div>
+        </div>
+        <!-- update profile page -->
+        <div id="updating-profile-page" class="hide login-register-page">
+            <h3 class="loginTopic">Update your profile</h3>
+            <div class="loginInputBox">
+                <p class="loginPtag">Email:</p>
+                <input type="text" class="loginInput" id="update-email"><br>
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">New Password:</p>
+                <input type="possword" class="loginInput" id="update-password"><br>
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">New Password confirm:</p>
+                <input type="possword" class="loginInput" id="update-password-confirm"><br>
+            </div>
+            <div class="loginInputBox">
+                <p class="loginPtag">name:</p>
+                <input type="text" class="loginInput" id="update-name"><br>
+            </div>
+            <div>
+                <button id="back-profile" class="loginButton">Back to profile</button>
+                <button id="profile-update-submit" class="loginButton">Submit</button>
+            </div>
+
+
+
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; Quickpic</p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
