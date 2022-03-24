@@ -1,4 +1,4 @@
-# Assessment 2 - Vanilla JS: QuickPic
+# Vanilla JS: QuickPic
 
 1. Background & Motivation
 2. The Task (Frontend)
