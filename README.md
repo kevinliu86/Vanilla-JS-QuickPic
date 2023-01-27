@@ -9,10 +9,6 @@
 7. Submission
 8. Late Submission Policy
 
-## 0. Change Log
-
-Coming Soon
-  
 ## 1. Background & Motivation
 
 Web-based applications are becoming the most common way to build a digital capability accessible to a mass audience. While there are modern tools that help us build these rapidly, it's important to understand the fundamental Javascript-based technology and architectures that exist, both to gain a deeper understanding for when these skills may be needed, but also to simply understand the mechanics of fundamental JS. Even when working with a high level framework like React, understanding (in-concept) the code that is transpiled-to will ensure you're a more well rounded web-based engineer.
